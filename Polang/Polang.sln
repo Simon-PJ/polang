@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polang", "Polang\Polang.csproj", "{FC1784B2-3360-4278-8FF1-AEA2FB8E7BF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polang.UnitTests", "Polang.UnitTests\Polang.UnitTests.csproj", "{8C0E340D-A61E-4590-9D1B-454524370888}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FC1784B2-3360-4278-8FF1-AEA2FB8E7BF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC1784B2-3360-4278-8FF1-AEA2FB8E7BF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC1784B2-3360-4278-8FF1-AEA2FB8E7BF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C0E340D-A61E-4590-9D1B-454524370888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C0E340D-A61E-4590-9D1B-454524370888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C0E340D-A61E-4590-9D1B-454524370888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C0E340D-A61E-4590-9D1B-454524370888}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
