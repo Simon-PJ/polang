@@ -27,3 +27,25 @@ Writing to the console is done via the `Say eh-oh` keyword.
 ```
 Say eh-oh "Tinky winky!"
 ```
+
+### Variables
+
+A variable can be defined by the key phrase `Time for` followed by the variable name and an initial value. 
+
+Currently supported types:
+- String
+
+#### Example
+
+```
+Time for x 10
+```
+
+### If statements
+
+`What's that?` followed by an expression will trigger an if block. Any following lines starting with a tab will execute if the expression evaluates to true.
+
+### Loops
+
+`Ring a ring roses, a pocket full of posies` will start an infinite loop. `A-tishoo, a-tishoo` defines the end of the loop scope. The loop will exit when the keyword `We all fall down` is encountered.
+

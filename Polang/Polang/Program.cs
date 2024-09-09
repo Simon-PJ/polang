@@ -16,6 +16,8 @@ if (lines.Last() != "The sun is setting in the sky, Teletubbies say goodbye")
     return;
 }
 
+var variables = new Dictionary<string, object>();
+
 foreach (var line in lines)
 {
     if (line.StartsWith("Say eh-oh "))
@@ -27,5 +29,17 @@ foreach (var line in lines)
         {
             Console.WriteLine(toBeEhOhed.Substring(1, toBeEhOhed.Length - 2));
         }
+        else
+        {
+            var variableToBeEhOhed = variables[toBeEhOhed];
+            Console.WriteLine(variableToBeEhOhed);
+        }
+    }
+    else if (line.StartsWith("Time for "))
+    {
+        var variableName = line.Substring("Time for ".Length).Split(' ')[0];
+        var initialValue = line.Substring($"Time for {variableName} ".Length).TrimEnd('\n').Trim('"');
+
+        variables.Add(variableName, initialValue);
     }
 }
