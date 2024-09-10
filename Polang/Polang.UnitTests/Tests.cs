@@ -29,6 +29,12 @@ namespace Polang.UnitTests
             RunProgram("Variable.po").Single().Should().Be("Naughty Noo-Noo!");
         }
 
+        [Fact]
+        public void TrueIfStatement()
+        {
+            RunProgram("IfStatementTrue.po").Single().Should().Be("It's Po!");
+        }
+
         private string[] RunProgram(string poFile)
         {
             var process = new Process();

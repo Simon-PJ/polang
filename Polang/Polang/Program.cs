@@ -17,12 +17,29 @@ if (lines.Last() != "The sun is setting in the sky, Teletubbies say goodbye")
 }
 
 var variables = new Dictionary<string, object>();
+var programState = new ProgramState();
 
-foreach (var line in lines)
+foreach (var rawLine in lines)
 {
-    if (line.StartsWith("Say eh-oh "))
+    var line = rawLine;
+
+    if (line.StartsWith('\t') && !programState.IsInIfBlock)
     {
-        var toBeEhOhed = line.Substring("Say eh-oh ".Length);
+        continue;
+    }
+
+    if (line.StartsWith('\t'))
+    {
+        line = line.Substring(1);
+    }
+    else
+    {
+        programState.IsInIfBlock = false;
+    }
+
+    if (line.StartsWith(KeyPhrases.SayEhOh))
+    {
+        var toBeEhOhed = line.Substring(KeyPhrases.SayEhOh.Length);
         var isString = toBeEhOhed.First() == '"' && toBeEhOhed.Last() == '"';
 
         if (isString)
@@ -35,11 +52,21 @@ foreach (var line in lines)
             Console.WriteLine(variableToBeEhOhed);
         }
     }
-    else if (line.StartsWith("Time for "))
+    else if (line.StartsWith(KeyPhrases.TimeFor))
     {
-        var variableName = line.Substring("Time for ".Length).Split(' ')[0];
-        var initialValue = line.Substring($"Time for {variableName} ".Length).TrimEnd('\n').Trim('"');
+        var variableName = line.Substring(KeyPhrases.TimeFor.Length).Split(' ')[0];
+        var initialValue = line.Substring($"{KeyPhrases.TimeFor}{variableName} ".Length).Trim('"');
 
         variables.Add(variableName, initialValue);
+    }
+    else if (line.StartsWith(KeyPhrases.WhatsThat))
+    {
+        var variableOne = line.Substring(KeyPhrases.WhatsThat.Length).Split(' ')[0];
+        var variableTwo = line.Substring(KeyPhrases.WhatsThat.Length).Split(' ')[1];
+
+        if (variables[variableOne].Equals(variables[variableTwo]))
+        {
+            programState.IsInIfBlock = true;
+        }
     }
 }

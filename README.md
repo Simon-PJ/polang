@@ -43,7 +43,17 @@ Time for x 10
 
 ### If statements
 
-`What's that?` followed by an expression will trigger an if block. Any following lines starting with a tab will execute if the expression evaluates to true.
+`What's that?` followed by two variables. Any following lines starting with a tab will execute if the given variables are the same.
+
+#### Example
+
+```
+Time for x "Po"
+Time for y "Po"
+
+What's that? x y
+    Say eh-oh "It's Po!"
+```
 
 ### Loops
 
