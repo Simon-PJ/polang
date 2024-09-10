@@ -65,6 +65,18 @@ What's that? x y
     Say eh-oh "It's Po!"
 ```
 
+### Maths
+
+Numbers can be added together using `Time for` followed by two variables.
+
+#### Example
+
+```
+Time for x 1
+Time for y 2
+Time for z x y
+```
+
 ### Loops
 
 `Ring a ring o' roses, a pocket full of posies` will start an infinite loop. `A-tishoo, a-tishoo` defines the end of the loop scope. The loop will exit when the keyword `We all fall down` is encountered.

@@ -51,6 +51,12 @@ namespace Polang.UnitTests
             });
         }
 
+        [Fact]
+        public void MathsAddition()
+        {
+            RunProgram("MathsAddition.po").Single().Should().Be("3");
+        }
+
         private string[] RunProgram(string poFile)
         {
             var process = new Process();

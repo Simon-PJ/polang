@@ -37,6 +37,9 @@
     <None Update="TestPrograms\IfStatementTrue.po">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="TestPrograms\MathsAddition.po">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="TestPrograms\MissingEnd.po">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

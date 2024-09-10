@@ -1,4 +1,5 @@
 ﻿using Polang;
+using System.Transactions;
 
 var poFile = args[0];
 
@@ -55,15 +56,26 @@ foreach (var rawLine in lines)
     else if (line.StartsWith(KeyPhrases.TimeFor))
     {
         var variableName = line.Substring(KeyPhrases.TimeFor.Length).Split(' ')[0];
-        var initialValue = line.Substring($"{KeyPhrases.TimeFor}{variableName} ".Length).Trim('"');
 
-        if (!variables.ContainsKey(variableName))
+        var trail = line.Substring($"{KeyPhrases.TimeFor}{variableName} ".Length);
+
+        object? value = null;
+        if (!trail.Contains("\"") && trail.Contains(" "))
         {
-            variables.Add(variableName, initialValue);
+            value = (int)variables[trail.Split(' ')[0]] + (int)variables[trail.Split(' ')[1]];
         }
         else
         {
-            variables[variableName] = initialValue;
+            value = trail.Contains("\"") ? trail.Trim('"') : int.Parse(trail);
+        }
+
+        if (!variables.ContainsKey(variableName))
+        {
+            variables.Add(variableName, value);
+        }
+        else
+        {
+            variables[variableName] = value;
         }
     }
     else if (line.StartsWith(KeyPhrases.WhatsThat))
