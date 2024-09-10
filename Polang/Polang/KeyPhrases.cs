@@ -7,5 +7,8 @@
         public const string TimeFor = "Time for ";
         public const string WhatsThat = "What's that? ";
         public const string ProgramEnd = "The sun is setting in the sky, Teletubbies say goodbye";
+        public const string LoopStart = "Ring a ring o' roses";
+        public const string LoopEnd = "A-tishoo, a-tishoo";
+        public const string LoopTerminate = "We all fall down!";
     }
 }

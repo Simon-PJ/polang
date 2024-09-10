@@ -28,6 +28,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="TestPrograms\ForLoop.po">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="TestPrograms\HelloWorld.po">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

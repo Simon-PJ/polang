@@ -67,7 +67,8 @@ What's that? x y
 
 ### Maths
 
-Numbers can be added together using `Time for` followed by two variables.
+Numbers can be added together using `Time for` followed by a variable name and 2 variables. These
+two variables will be added together to give the value for the given name.
 
 #### Example
 
@@ -79,19 +80,27 @@ Time for z x y
 
 ### Loops
 
-`Ring a ring o' roses, a pocket full of posies` will start an infinite loop. `A-tishoo, a-tishoo` defines the end of the loop scope. The loop will exit when the keyword `We all fall down` is encountered.
+`Ring a ring o' roses, a pocket full of posies` will start an infinite loop. `A-tishoo, a-tishoo` defines the end of the loop scope. The loop will exit when the keyword `We all fall down!` is encountered.
 
 #### Example
 
 Prints the numbers 1 to 10:
 
 ```
-Time for i = 1
+Time for i 1
+Time for increment 1
+Time for loopUntil 10
 
 Ring a ring o' roses, a pocket full of posies
 
+Say eh-oh i
+
+What's that i loopUntil
+    We all fall down!
+
+Time for i i increment
 
 
-A-tishoo, a-tissue
+A-tishoo, a-tishoo
 ```
 

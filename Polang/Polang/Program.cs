@@ -1,5 +1,4 @@
 ﻿using Polang;
-using System.Transactions;
 
 var poFile = args[0];
 
@@ -20,9 +19,9 @@ if (lines.Last() != "The sun is setting in the sky, Teletubbies say goodbye")
 var variables = new Dictionary<string, object>();
 var programState = new ProgramState();
 
-foreach (var rawLine in lines)
+for (var i = 0; i < lines.Length; i++)
 {
-    var line = rawLine;
+    var line = lines[i];
 
     if (line.StartsWith('\t') && !programState.IsInIfBlock)
     {
@@ -87,5 +86,25 @@ foreach (var rawLine in lines)
         {
             programState.IsInIfBlock = true;
         }
+    }
+    else if (line.StartsWith(KeyPhrases.LoopStart))
+    {
+        programState.CurrentLoopStartLine = i + 1;
+    }
+    else if (line.StartsWith(KeyPhrases.LoopEnd) && programState.CurrentLoopStartLine.HasValue)
+    {
+        if (programState.ExitingLoop)
+        {
+            programState.ExitingLoop = false;
+        }
+        else
+        {
+            i = programState.CurrentLoopStartLine.Value - 1;
+        }
+    }
+    else if (line.StartsWith(KeyPhrases.LoopTerminate))
+    {
+        programState.CurrentLoopStartLine = null;
+        programState.ExitingLoop = true;
     }
 }

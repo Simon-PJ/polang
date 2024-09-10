@@ -57,6 +57,24 @@ namespace Polang.UnitTests
             RunProgram("MathsAddition.po").Single().Should().Be("3");
         }
 
+        [Fact]
+        public void ForLoop()
+        {
+            RunProgram("ForLoop.po").Should().BeEquivalentTo(new[]
+            {
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+            });
+        }
+
         private string[] RunProgram(string poFile)
         {
             var process = new Process();
