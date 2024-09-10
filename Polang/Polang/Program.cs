@@ -82,6 +82,9 @@ for (var i = 0; i < lines.Length; i++)
         var variableOne = line.Substring(KeyPhrases.WhatsThat.Length).Split(' ')[0];
         var variableTwo = line.Substring(KeyPhrases.WhatsThat.Length).Split(' ')[1];
 
+        var valueOne = variables[variableOne];
+        var valueTwo = variables[variableTwo];
+
         if (variables[variableOne].Equals(variables[variableTwo]))
         {
             programState.IsInIfBlock = true;

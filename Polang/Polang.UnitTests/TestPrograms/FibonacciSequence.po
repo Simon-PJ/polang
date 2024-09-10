@@ -1,0 +1,28 @@
+Over the hills and faraway Teletubbies come to play
+
+Time for a 0
+Time for b 1
+Time for i 0
+Time for fibLength 8
+Time for increment 1
+Time for zero 0
+
+Say eh-oh a
+Say eh-oh b
+
+Ring a ring o' roses, a pocket full of posies
+
+Time for nextFib a b
+
+Say eh-oh nextFib
+
+Time for i i increment
+Time for a b zero
+Time for b nextFib zero
+
+What's that? i fibLength
+	We all fall down!
+
+A-tishoo, a-tishoo
+
+The sun is setting in the sky, Teletubbies say goodbye

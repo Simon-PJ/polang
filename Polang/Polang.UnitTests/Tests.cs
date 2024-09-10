@@ -75,6 +75,24 @@ namespace Polang.UnitTests
             });
         }
 
+        [Fact]
+        public void FibonacciSequence()
+        {
+            RunProgram("FibonacciSequence.po").Should().BeEquivalentTo(new[]
+            {
+                "0",
+                "1",
+                "1",
+                "2",
+                "3",
+                "5",
+                "8",
+                "13",
+                "21",
+                "34",
+            });
+        }
+
         private string[] RunProgram(string poFile)
         {
             var process = new Process();
