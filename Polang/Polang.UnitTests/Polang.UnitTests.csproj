@@ -31,6 +31,9 @@
     <None Update="TestPrograms\HelloWorld.po">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="TestPrograms\IfStatementFalse.po">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="TestPrograms\IfStatementTrue.po">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
