@@ -41,6 +41,16 @@ namespace Polang.UnitTests
             RunProgram("IfStatementFalse.po").Should().BeEmpty();
         }
 
+        [Fact]
+        public void VariableReassignment()
+        {
+            RunProgram("VariableReassignment.po").Should().BeEquivalentTo(new[]
+            {
+                "Po",
+                "Dipsy",
+            });
+        }
+
         private string[] RunProgram(string poFile)
         {
             var process = new Process();

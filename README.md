@@ -34,11 +34,21 @@ A variable can be defined by the key phrase `Time for` followed by the variable 
 
 Currently supported types:
 - String
+- Int
 
 #### Example
 
 ```
 Time for x 10
+```
+
+Variables can be reassigned using the same technique:
+
+```
+Time for x "Po"
+Say eh-oh x // Prints "Po"
+Time for x "Dipsy"
+Say eh-oh x // Prints "Dipsy"
 ```
 
 ### If statements
@@ -57,5 +67,19 @@ What's that? x y
 
 ### Loops
 
-`Ring a ring roses, a pocket full of posies` will start an infinite loop. `A-tishoo, a-tishoo` defines the end of the loop scope. The loop will exit when the keyword `We all fall down` is encountered.
+`Ring a ring o' roses, a pocket full of posies` will start an infinite loop. `A-tishoo, a-tishoo` defines the end of the loop scope. The loop will exit when the keyword `We all fall down` is encountered.
+
+#### Example
+
+Prints the numbers 1 to 10:
+
+```
+Time for i = 1
+
+Ring a ring o' roses, a pocket full of posies
+
+
+
+A-tishoo, a-tissue
+```
 

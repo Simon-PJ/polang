@@ -57,7 +57,14 @@ foreach (var rawLine in lines)
         var variableName = line.Substring(KeyPhrases.TimeFor.Length).Split(' ')[0];
         var initialValue = line.Substring($"{KeyPhrases.TimeFor}{variableName} ".Length).Trim('"');
 
-        variables.Add(variableName, initialValue);
+        if (!variables.ContainsKey(variableName))
+        {
+            variables.Add(variableName, initialValue);
+        }
+        else
+        {
+            variables[variableName] = initialValue;
+        }
     }
     else if (line.StartsWith(KeyPhrases.WhatsThat))
     {

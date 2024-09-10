@@ -46,6 +46,9 @@
     <None Update="TestPrograms\Variable.po">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="TestPrograms\VariableReassignment.po">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
