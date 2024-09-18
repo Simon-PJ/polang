@@ -2,7 +2,7 @@
   "profiles": {
     "Polang": {
       "commandName": "Project",
-      "commandLineArgs": "C:\\Users\\simon\\source\\repos\\polang\\Polang\\Polang.UnitTests\\TestPrograms\\FibonacciSequence.po"
+      "commandLineArgs": "C:\\Users\\simon\\source\\repos\\polang\\Polang\\Polang.UnitTests\\TestPrograms\\ForLoop.po"
     }
   }
 }
